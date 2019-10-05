@@ -29,26 +29,66 @@ public class login extends javax.swing.JDialog {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jTusuario = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jPcontraseña = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/Iconos/bloquear.png"))); // NOI18N
+        jLabel1.setText("usuario");
+
+        jLabel2.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/Iconos/ojo-de-cerradura.png"))); // NOI18N
+        jLabel2.setText("Contraseña");
+
+        jButton1.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/Iconos/error.png"))); // NOI18N
+        jButton1.setText("Cancelar");
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/Iconos/entrar.png"))); // NOI18N
+        jButton2.setText("Iniciar sesión");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jLabel1)
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(34, 34, 34)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTusuario)
+                            .addComponent(jPcontraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel1)
-                .addContainerGap(245, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(jPcontraseña))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -97,6 +137,11 @@ public class login extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPasswordField jPcontraseña;
+    private javax.swing.JTextField jTusuario;
     // End of variables declaration//GEN-END:variables
 }
